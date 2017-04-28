@@ -1,0 +1,1136 @@
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+@import url(http://fonts.googleapis.com/css?family=Fira+Mono:400,700);
+
+/* Setup page geometry */
+
+body.main {
+    height: 95vh;
+    background-color: #FFB4AC;;
+    font-family: Lucida, "Lucida Bright", Georgia, serif;
+    line-height: 1.3; /* do not use a percentage or absolute unit */
+    color: black;
+    margin-left: 0;
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+body.main a { color: #550000;
+        text-decoration: none }
+
+body.main a:hover { background-color: #AA3939;
+                    color: white }
+
+
+
+
+div.skipnav {
+    background: #FFB4AC;;
+    color: black;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+div.skipnav a {
+    position: fixed;
+    left: -10000px;
+    top: 1.5em;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+div.skipnav a:focus, div.skipnav a:active {
+    background: #FFB4AC;;
+    color: black;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    position: fixed;
+    left: 2em; /* skip "hide nav" box */
+    top: 1.5em;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    text-decoration: underline;
+    z-index: 14;
+}
+
+#nav {
+     width: 23%;
+     height: 80%; /* fallback */
+     height: calc(100% - 1.5em);
+     float: left;
+     position: fixed;
+     top: 1.5em; /* leave room for switcher */
+     overflow-y: auto; /* scroll when needd */
+     background: #FFB4AC;;
+     background-image: url("../texture.png");
+     color: black;
+     font-family: 'PT Sans Narrow', sans-serif;
+     font-weight: 700;
+     border-right: 1px solid #AA3939;
+}
+#text {
+    width: 77%;
+    float: right;
+    background: white;
+    padding-left: 0.5em;
+}
+
+div.pageheader {
+  background-color: #AA3939;
+  color: white;
+  /*
+  border-top: thin solid;
+  border-bottom: none;
+  border-left: thin solid;
+  border-right: thin solid;
+  */
+  padding: 0.25em 1em 0 0.25em;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+p.para {
+	margin-left: 1em;
+    max-width: 50em;
+}
+
+p.index-entry {
+  margin-left: 0.5em;
+}
+
+div.para {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    max-width: 50em;
+}
+
+li {
+ margin-top: 4px;
+}
+
+h1, h2, h3, h4 {
+	/* margin-left: 0.5em; */
+	font-size-adjust: 0.6;
+}
+div.titlepage
+        { background-color: #FFB4AC;
+          text-align: center;
+          margin-top: 2em;
+          margin-left: 2em;
+          margin-right: 2em;
+          margin-bottom: 2em;
+          padding-top: 4em;
+          padding-left: 3em;
+          padding-right: 3em;
+          padding-bottom: 2em }
+
+div.developer
+        { margin-top: 3em; }
+
+div.vershistory
+        { text-align: left }
+
+h3.sponsor
+        { margin-top: 3em;
+          font-style: italic;
+          font-size: 140% }
+
+/* These items appear at the top of the HTML pages */
+h1.header,  h1.sectiontitle, div.section  > h3:first-child, div.section > h4:first-child
+	{ font-family: sans-serif;
+          font-size: 125%;
+          margin-top: 0.25em;
+          margin-bottom: 0em; }
+
+ h2.header
+		{font-size: 120%;
+		  font-family: sans-serif;
+          margin-top: 1em;
+          margin-bottom: 0em;}
+
+ h3.header
+		{font-size: 110%;
+					font-family: sans-serif;
+					margin-top: 1em;
+          margin-bottom: 0em;}
+
+ h4.header
+		{ font-size: 100%;
+					font-family: sans-serif;
+          margin-top: 1em;
+          margin-bottom: 0em; }
+
+.header.first
+  { border-top: thin ridge }
+
+h1.elementtag, h1.attrtag, h1.petag
+        { font-family: "Fira Mono", monospace;
+          font-size: x-large;
+          margin-top: 0em;
+          margin-bottom: 0em;
+					display: inline }
+
+h1.attrtag:before {
+    content: "@";
+    color: #AA3939;
+    font-size: 80%;
+
+    position: relative; /* enable relative motion */
+    top: -0.1em; /* raise the @ slightly */
+}
+
+a.attrname:before {
+    content: "@";
+    font-size: 80%;
+    opacity: 0.4;
+
+    position: relative; /* enable relative motion */
+    top: -0.1em; /* raise the @ slightly */
+}
+
+h1.attrname, h1.elementname, h1.pename
+        { font-family: sans-serif;
+          font-size: x-large;
+					font-weight:bold;
+          margin-top: 0em;
+          margin-bottom: 0em;
+					display: inline }
+
+h1.attrname:before, h1.elementname:before, h1.pename:before
+        { font-size: 120%;
+          font-weight: normal;
+          font-family: sans-serif;
+          content: "\A0";
+          display: inline }
+
+h3.elemannotation, h3.attribannotation {
+          display: inline;
+          font-weight: normal;
+          font-size: inherit }
+
+h3.elemannotation:before, h3.attribannotation:before {
+          content: " (";
+          display: inline }
+
+h3.elemannotation:after, h3.attribannotation:after {
+          content: ")";
+          display: inline }
+
+
+div.definition { }
+
+pre.contentdesc,
+p.contentdesc
+        { font-family: "Fira Mono", monospace;
+    background-color: #FFB4AC;
+          background-image: url(../texture.png);
+          margin-top: 0.5em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+          padding-left: 0.5em;
+          padding-right: 0.5em }
+
+pre.taggedtext
+        { background-color: #FFB4AC;
+          background-image: url(../texture.png);
+          padding-left: 0.5em;
+          padding-right: 0.5em }
+
+pre.taggedtext strong
+        { display: inline;
+          /* background-color: white; */
+          color: #AA3939 }
+
+p       { margin-top: 0.25em;
+          margin-bottom: 0em;
+          font-weight: normal;}
+
+ul      { margin-top: 0em;
+          margin-bottom: 0em }
+
+div.attrlist h5
+        { font-size: 110%;
+          margin-left: 0.5em;
+          margin-top: 0.25em;
+          margin-bottom: 0em }
+
+div.elementlist {
+  margin-left: 1em;
+}
+
+div.attrvalues {
+          /* background-color: #FFB4AC; */
+          margin-top: 1em;
+          margin-bottom: 1em;
+          padding-left: 0.25em;
+          padding-right: 0.25em;
+          padding-top: 0.25em;
+          padding-bottom: 0.25em }
+
+div.deflist
+        {
+          padding-left: 0;
+          padding-right: 0.25em;
+          padding-top: 0.25em;
+          padding-bottom: 0.25em }
+
+/* div.attrvalues h4
+        { font-size: 80%;
+          margin-top: 0em;
+          margin-bottom: 0em } */
+
+div.attrvalues h5
+        { font-size: 100%;
+          margin-left: 0.5em;
+          margin-top: 0.25em;
+          margin-bottom: 0em }
+
+div.letterindex
+        { padding-top: 0.25em;
+          padding-bottom: 0.25em;
+          margin-bottom: 1.5em;
+          margin-top: 0em }
+
+div.codeblock {
+	margin-left: 1em;
+}
+
+div.pbr {
+	margin-top:0.25em;
+}
+
+span.tt {
+font-family: "Fira Mono", monospace;
+}
+
+/* Table formatting */
+td, th
+		{ padding: 0px;}
+
+
+td p
+	{ margin-top: 0em;
+	margin-bottom: 0em;}
+
+tr { vertical-align: top }
+
+tr.row0 { }
+
+tr.row1 { background-color: #FFB4AC;; }
+
+table.attrtable
+        { margin-top: 0.5em }
+
+table.attrtable td
+        { border-top: thin ridge;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          padding-top: 0.2em;
+          padding-bottom: 0em;
+        }
+table.attrtable th
+        { font-family: sans-serif;
+          /* font-size: 80%; */
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          padding-top: 0.2em;
+          padding-bottom: 0em;
+        }
+
+td.attrvalue { text-align: right; }
+
+th.attrvalue
+        { text-align: right;
+          font-weight: bold }
+
+th.attrmeaning
+        { text-align: left;
+          font-weight: bold }
+
+td.attrrestricthead {
+    text-align: right;
+    color: #AA3939; /* to make clear it's not a value */
+}
+
+td.attrrestrict {
+    text-align: left;
+}
+
+
+table.deflisttable
+        {  border-collapse: collapse;
+				}
+
+tr.defitem
+        { vertical-align: top;
+          margin-top: 0.5em }
+
+th.termhead
+        { text-align: right;
+          border-bottom: 1px dotted;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+          padding-right: 1em;
+          font-weight: bold;
+          font-style:italic }
+
+th.defhead
+        { border-bottom: 1px dotted;
+          font-style:italic }
+
+.dterm
+        { text-align: right;
+          padding-right: 0.75em;
+          font-weight: normal;
+}
+
+.ddef
+        { margin-top: 0.25em;
+          margin-bottom: 0.25em;
+          }
+
+/* "Context table" styles */
+table.contexttable
+  { margin-bottom: 1.5em }
+table.contexttable tr th {
+    text-align: left;
+}
+
+td.containedcellname
+        { padding-left: 0.25em;
+          padding-right: 0.25em;
+          vertical-align: top }
+
+td.containedcelltag,
+td.containingcelltag,
+td.notcontained,
+td.containingcellname,
+td.contextcelltag
+        { padding-left: 0.25em;
+          padding-right: 0.25em;
+          vertical-align: top }
+
+.intable
+  { font-size: 0.66em }
+
+div.revhistory
+        { font-size: 100%;
+          font-style: italic;
+    border-top: thin ridge }
+
+div.contentmodel h2,
+div.modeldesc h2,
+div.elementcontext h2,
+div.examp.group h2,
+div.attrlist h2,
+div.attrvalueinfo h2
+div.presentinfo h2
+div.remarks h2,
+div.relatedelem h2,
+div.usage h2,
+div.source  h2
+{
+    font-size: large;
+    font-weight: bold;
+}
+
+div.attrvalueinfo h2
+        { border-top: thin ridge }
+
+div.moduledefined h2
+        { font-size: 100%;
+          font-style: italic;
+    border-top: thin ridge }
+
+div.mod p
+        { font-size: 80%;
+          font-family: sans-serif;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+dt      { font-weight: bold }
+
+dd p    { margin-top: 0em;
+          margin-bottom: 0.5em }
+
+div.mod
+        { margin-top: 0.25em;
+          margin-bottom: 0.25em;
+          border-left: thin solid;
+          padding-left: 0.5em }
+
+p.moduledefined
+        { font-family: "Fira Mono", monospace;
+          font-weight: bold }
+
+p.moddesc
+        { font-style: italic }
+
+p.modpara
+        { margin-left: 0.5em }
+
+div.modeldesc span.annotation { font-style: italic }
+
+
+div.pageheader h2.headname
+        { text-align: right;
+          border-top: none;
+          font-size: 120%;
+          font-style: italic;
+          font-weight: bold;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+div.pageheader h4.sponsor
+        { text-align: right;
+          border-top: none;
+          font-size: 80%;
+          margin-top: 0em;
+          margin-bottom: 0.5em }
+
+div.pagefooter
+        { background-color: #AA3939;
+          color: white;
+          margin-top: 1em;
+          margin-top: 1em;
+          padding-top: 0.25em;
+          padding-bottom: 3em;
+	  clear: both;
+	  /* extend the background all the way to the left: */
+	  margin-left: -1em;
+	  padding-left: 1em;
+}
+
+div.pagefooter a {
+  color: white;
+}
+
+.pagefooter div.headname
+        { border-top: none;
+          font-size: 90%;
+          font-weight: bold;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+.pagefooter div.sponsor
+        { border-top: none;
+          font-size: 70%;
+          font-weight: normal;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+.pagefooter  div.pubdate
+        { border-top: none;
+          font-size: 70%;
+          font-weight: normal;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+.pagefooter div.developer
+        { border-top: none;
+          font-size: 90%;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+div.backtotop{
+	margin-top:0;
+	padding-top:0;
+	padding-right:1em;
+	}
+
+span.devlabel
+        { font-style: italic }
+
+div.copyright
+        { font-style: italic;
+          font-weight: normal;
+          border-top: none;
+          font-size: 80%;
+          margin-top: 0em;
+          margin-bottom: 0em }
+
+span.modlabel
+        { font-style: italic }
+
+span.elementname, span.attrname
+        {
+	font-family: Lucida, "Lucida Bright", Georgia, serif;
+       }
+
+span.elementtag, span.attrtag, span.petag
+        { font-family: "Fira Mono", monospace;
+			font-size:100%;
+		}
+
+img { border: none }
+
+hr { display:none }
+
+/* styles for index */
+
+span[class~="index.alternative"][class~="only"]
+  {display: inline;
+   margin-left: 0em}
+span[class~="index.alternative"]
+  {display: block;
+   margin-left: 2em}
+
+p[class~="index.index"]
+  { background-color: #FFB4AC;
+    margin-top: 1em }
+
+/* styles for ToC (left) panel */
+
+div.toc { font-family: sans-serif;
+          font-size: 80%;
+          margin-left: 0.75em }
+
+table.toc-title { position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+	background-color: #AA3939;
+	padding: 0.5em 0;
+	text-align: center; }
+
+div.toc-section { margin-left: 1em }
+
+body.toc  {padding-top: 4.5em;
+	   background-color: #AA3939;
+           color: white }
+
+div.toc-entry { margin: 2px;
+                padding-top: 0px;
+                padding-bottom: 4px;
+                padding-left: 4px;
+                padding-right: 4px;
+                background-color: #AA3939 }
+
+img.toc-icon { vertical-align: text-bottom;
+               margin-left: -18px;
+               float: left;
+               width: 12px }
+
+body.toc a { color: #AA3939;
+             background-color: #7F5A56;
+             text-decoration: none }
+
+body.toc a:hover { background-color: #FFB4AC;
+                   color: #550000}
+
+body.toc a.linkbox:hover { color: #AA3939;
+                           background-color: #7F5A56;
+                           text-decoration: none }
+
+
+#nav input#Searchbar {
+    z-index: 7; /* on top of the label */
+    line-height: 1; /* relative unit */
+    margin-top: -1.5em; /* on top of the label */
+    position: fixed;
+    background: #FFB4AC;;
+    color: black;
+    width: 18%; /* narrower than the column */
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+span#searchinfogoeshere sup {
+    margin-right: 0.5em; /* the close button */
+}
+
+i.searchhelp {
+    width: 1em;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-block;
+    color: #AA3939;
+    background: #FFB4AC;;
+    font-style: normal;
+    position: fixed;
+    text-align: left;
+    line-height: 1.2em;
+}
+
+i.searchhelp:hover, i.searchhelp:focus {
+    z-index: 21;
+    font-style: normal;
+    font-weight: normal;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+    /* stacking order means the pop-up can end
+     * up under the nav pane; avoid that by
+     * moving it to the right:
+     */
+    border-left: 1em solid #006400;
+    padding-left: 1em;
+}
+
+i.searchhelp i b { /* the "?" */
+    border: 1px solid #AA3939;
+    color: #AA3939;
+    border-radius: 0.5em;
+    border: 1px solid #AA3939;
+    font-size: 80%;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2em;
+    width: 1em; /* make a circle */
+    display: inline-block;
+    text-align: center; /* for the "?" */
+    margin-left: 0.1em; /* space away from the close symbol */
+}
+
+i.searchhelp i:nth-of-type(1) {
+    display: inline-block;
+    line-height: 1em;
+    margin-top: 0;
+    margin-left: 0;
+    font-style: normal;
+}
+
+i.searchhelp i:nth-of-type(1) b {
+    display: block;
+    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-style: normal;
+}
+
+i.searchhelp i {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-style: normal;
+    margin-left: 1.5em;
+}
+i.searchhelp i:nth-of-type(2) {
+    margin-left: 0.5em;
+}
+i.searchhelp i:nth-of-type(3) {
+    margin-left: 0.5em;
+}
+
+ul.ui-autocomplete {
+  background: #FFB4AC;;
+  color: black;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  margin-left: 1em;
+}
+
+ul.ui-autocomplete li.ui-state-focus {
+  color: #FFB4AC;;
+  background: black;
+  font-weight: 700; /* bold */
+}
+
+/* nav tree, see: http://www.thecssninja.com/css/css-tree-menu */
+
+#nav ol
+{
+  padding: 0;
+}
+#nav li {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin-left: 0.5em;
+}
+
+#nav li.file {
+  /* margin-left: -1px !important; */
+}
+#nav li.file a {
+ display: block;
+ width: 90%; /* fallback */
+ width: calc(100% - 1em);
+ margin-left: 1em;
+ /* background: url(document.png) 0 0 no-repeat; */
+ background-size: 20px 20px;
+ /*   color: white; */
+ /* padding-left: 24px; */
+ /*   text-decoration: none; */
+ /*   display: block; */
+}
+
+#nav li li.file a.index-letter-in-nav-panel {
+    display: inline-block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: 1.5em; /* to get alignment in cols */
+    text-align: center; /* alignment */
+    margin-right: 0.5em;
+}
+
+#nav li li.file a {
+    margin-left: 0;
+}
+
+#nav li input {
+		/*
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		/* opacity: 0; */
+		/*
+		z-index: 2;
+		cursor: pointer;
+		height: 1em;
+		width: 1em;
+		top: 0;
+		*/
+
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+#nav li input ~ ol
+{
+ margin-left: 0;
+ color: black;
+ list-style: none;
+}
+
+#nav li input:checked ~ ol
+{
+  /* background: url(folder-minus.png) 40px 0 no-repeat; */
+  height: auto;
+  margin-left: 2em;
+  color: green;
+}
+
+#nav li input ~ ol > li {
+ display: none;
+}
+
+html.unused #nav li input:checked ~ [for="elem-sec"] ~ ol {
+    position: relative;
+}
+
+html.unused #nav li input:checked ~ [for="elem-sec"] ~ ol::before {
+    margin-top: 0.1em;
+    padding-top: 2.5em;
+    content: "</>";
+    display: block;
+    text-align: center;
+    float: left;
+    font-size: 15em;
+    color: #ccc;
+    opacity: 0.3;
+    z-index: -1;
+    margin-bottom: -4em;
+}
+
+html.unused #nav li input:checked ~ [for="attr-sec"] ~ ol {
+    position: relative;
+}
+
+html.unused #nav li input:checked ~ [for="attr-sec"] ~ ol::before {
+    margin-top: 0.1em;
+    padding-top: 2.5em;
+    content: "@";
+    display: block;
+    text-align: center;
+    float: left;
+    font-size: 15em;
+    color: #ccc;
+    opacity: 0.3;
+    z-index: -1;
+    margin-bottom: -4em;
+}
+
+html.unused #nav li input:checked ~ [for="pe-sec"] ~ ol {
+    position: relative;
+}
+
+html.unused #nav li input:checked ~ [for="pe-sec"] ~ ol::before {
+    margin-top: 0.1em;
+    padding-top: 2.5em;
+    content: "%";
+    display: block;
+    text-align: center;
+    float: left;
+    font-size: 15em;
+    color: #ccc;
+    opacity: 0.3;
+    z-index: -1;
+    margin-bottom: -4em;
+}
+
+
+#nav li label {
+  cursor: pointer;
+  display: block;
+}
+#nav label a {
+}
+
+
+#nav li input:checked ~ ol > li {
+  display: block; margin: 0 0 0.125em;  /* 2px */
+}
+
+#nav li input:checked ~ ol > li:last-child {
+  margin: 0 0 0.063em; /* 1px */
+}
+
+#nav li label input:checked ~  ol > li  {
+  display: block;
+  margin: 0 0 0.125em;  /* 2px */
+}
+
+#nav li label:before {
+  content: "▶ "; /* Rightwards Black Triangle  */
+  font-weight: 900;
+  color: #AA3939;
+  width: 1em;
+}
+#nav li input:checked ~ label:before {
+  content: "▼ "; /* down pointing triangle */
+  font-weight: 900;
+  color: #AA3939;
+  width: 1em;
+}
+
+
+
+#nav a:link{
+  color: #AA3939;
+}
+#nav a:visited {
+  color:#AA3939;
+}
+#nav a:hover {
+  color:#550000;
+  background-color: #FFB4AC;
+}
+#nav a:active {
+	color:white;
+	 background-color: #AA3939;
+}
+
+#horiznav {
+    overflow: hidden; /* contain the tab shadows */
+    margin-top: -0.75em; /* move tabs up */
+}
+
+#horiznav ul {
+  margin: 0;
+  padding: 0.5em 0 1px 0;
+  list-style: none;
+	text-align: left;
+}
+#horiznav ul li {
+	display: inline-block;
+	margin-right: 0.125em; /* space between tabs */
+	margin-left: 0.125em; /* space between tabs */
+}
+#horiznav  ul li  a{
+  border: 1px black solid; /* separate the tab from body */
+  text-decoration: none;
+    color: white;
+    padding: .2em 1em;
+    border-bottom: 2px solid #AA3939;
+    border-radius: 5px 5px 0 0;
+    background-color: #AA3939; /* fallback if gradients don't work */
+    box-shadow: 5px 0px 8px 0px rgba(0, 0, 0, 0.5);
+    /* the gradent here gives a 3D effect to the actual background colour */
+    background: linear-gradient(to right bottom, rgba(220, 220,220, 0.5), rgba(100, 100, 100, 0.2), #AA3939) repeat scroll 0% 0% transparent;
+    font-size: 90%;
+}
+
+#horiznav  ul li.active  a{
+    background: #FFB4AC;;
+    background-image: url("../texture.png");
+    background-repeat: repeat;
+    border: 1px white solid;
+    border-bottom: 2px solid #fff;
+    color: #AA3939;
+}
+
+
+#horiznav ul li a span {
+	/* padding: .2em 1 em; */
+}
+
+#horiznav ul li.active a:hover,
+#horiznav ul li.active a span:focus {
+}
+
+
+
+#horiznav ul li a:hover,
+#horiznav ul li a span:focus
+{
+	color: #550000;
+	background-color: #FFB4AC;
+	border: 1px solid black;
+	margin-right: 0;
+	background: linear-gradient(to left bottom, rgba(220, 220,220, 0.5), rgba(100, 100, 100, 0.2), #AA3939) repeat scroll 0% 0% transparent;
+}
+
+input#bchider {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="bchider"] {
+    display: inline;
+    padding-left: calc(23% - 2em);
+    padding-right: 1px;
+    position: relative;
+    top: 0;
+    height: auto;
+    text-align: center;
+    color: #AA3939;
+    background: #FFB4AC;;
+    font-weight: 900;
+    line-height: 1.2em;
+}
+
+[for="bchider"]:hover ~ [role="main"] {
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+[for="bchider"] span:nth-of-type(1) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="bchider"] span:nth-of-type(3) {
+    display: none;
+    visibility: hidden;
+}
+
+#bchider:checked ~ div#nav {
+    display: none;
+}
+#bchider ~ [role="main"] {
+    transition: width 0.2s;
+}
+#bchider:checked ~ [role="main"] {
+    width: 100%;
+    box-shadow: none;
+}
+
+#bchider:checked ~ [for="bchider"] {
+    border: none;
+    border-radius: 0 0 5px 0;
+    padding-left: 0;
+    width: 60%;
+    text-align: left;
+}
+#bchider:checked ~ [for="bchider"] span:nth-of-type(3) {
+    display: block;
+visibility: visible; }
+#bchider:checked ~ [for="bchider"] span:nth-of-type(2) {
+    display: none;
+visibility: hidden; }
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input#bchider {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="bchider"] {
+    display: block;
+    border-radius: 0 0 5px 0;
+    padding-left: calc(23% - 2em);
+    position: fixed;
+    top: 0;
+    height: auto;
+    text-align: center;
+    background-color: #FFB4AC;;
+    color: #333;
+    line-height: 1.5em;
+}
+
+[for="bchider"]:hover {
+    box-shadow: inset -10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+[for="bchider"] span:nth-of-type(1) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="bchider"] span:nth-of-type(3) {
+    display: none;
+visibility: hidden; }
+
+#bchider:checked ~ [role="complimentary"] {
+    display: none;
+}
+#bchider ~ [role="main"] {
+    transition: width 0.2s;
+}
+#bchider:checked ~ [role="main"] {
+    width: 100%;
+    box-shadow: none;
+}
+
+#bchider:checked ~ [for="bchider"] {
+    border: none;
+    padding-left: 0;
+    width: 1em;
+    text-align: left;
+}
+#bchider:checked ~ [for="bchider"] span:nth-of-type(3) {
+    display: block;
+visibility: visible; }
+#bchider:checked ~ [for="bchider"] span:nth-of-type(2) {
+    display: none;
+visibility: hidden; }
+
+#bchider ~ div.pageheader {
+    padding-left: 23%;
+}
+#bchider:checked ~ div.pageheader {
+    padding-left: 1em;
+}
+

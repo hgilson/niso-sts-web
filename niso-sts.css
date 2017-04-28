@@ -1,0 +1,316 @@
+
+/*
+CSS Stylesheet for niso-sts web site:  www.niso-sts.org
+Developed in April 2017 by BTU
+20170421; Modified by ASTM - Added Gradient Color scheme, Removed Background Colors to look more like JATS style tag website
+
+*/
+
+
+/*
+Colors taken from this pallet: 
+colors selected using Colour Scheme Chooser at:  http://websitetips.com/colortools/sitepro/     
+
+FFB4AC  - base color
+FFD9D6  - lighter
+FFECEA	 - very light
+A98885	  - mid-tone contrast
+544442  - dark contrast
+907184  - featured
+
+20170421; Modified by ASTM - Simplified color choices; removed background colors as necessary
+
+*/
+
+* { padding: 0; margin: 0;  }
+
+.back {
+	background: url(graphics/red-bkgrnd.gif); 
+	background-repeat: repeat-y;
+	}
+
+.logo{
+	margin-left:38px; 
+	max-width:135px; 
+	width:auto; 
+	height:auto;
+}
+	
+p.menubutton {  border-radius: 1em; color:white; margin-right: 4px;  margin-left: 4px; margin-top: 0; margin-bottom: 0}
+ 
+ div.menubutton { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt;  background-color: #A98885;   /*border: solid #FFB4AC;*/
+    border-radius: 1em;  box-shadow:  0.3em 0.3em 0.3em 0.1em #A98885; 
+     margin-top: 1px; margin-right: 4px; margin-bottom: 2px; margin-left: 4px
+    }
+	
+A.downlink  {
+ 
+    color: #FFD9D6 ;
+    font-family: sans-serif;
+    text-decoration: none
+}
+
+A.uplink  {
+
+    color:  #FFECEA ;
+    font-family: sans-serif;
+    text-decoration: none
+}
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px;
+    color:black ;
+    /* background: #FFB4AC*/}
+
+div.wrapper { 
+ margin: 0 auto
+}
+
+div.header {
+   width: 100%;  
+   float: right;
+   color: #FFFFFF;
+   padding-top: 10px; 
+   height: 100px;
+/* margin: 10px 0px 5px 0px; */
+   border-right: 10px /* solid dark purple #FFB4AC */;
+   /* background: #FFB4AC */   
+}
+
+div.nav { 
+   color: white;
+   /* border-right: 2px solid #FFB4AC; */ 
+   /* border-left: 2px solid #FFB4AC */; 
+   /* background: #FFB4AC; */
+   margin: 0px 2px 2px 0px; 
+   padding: 5px;   
+   width: 20%;
+   float: left; 
+ 
+}
+
+div.nav h2{ 
+   color: black;
+   margin-top: 4px; 
+ }
+ 
+ div.nav h3{ 
+   color: black;
+ }
+
+
+div.text { 
+   background: white;
+   margin: 0px 5px 5px 10px;
+   width: 70%;
+   float: right;
+   color: #0C2424;
+   padding-right: 10px;
+   border-right: solid dark purple  /* solid #FFB4AC */;
+   border-left: 10px solid white;
+   font-family: serif;
+}
+
+
+div.footer { 
+     /* width: 100%; */
+     clear: both;
+     color: black ;
+     border: 2px solid gray;
+     /* background: #FFB4AC */;
+     margin: 0px 0px 10px 0px;
+     padding: 10px;
+}
+
+
+
+ul.navlist
+{
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+ul.navlist li
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    background: #FFFFF ;
+    color: black
+}
+
+ul.navlist li a
+{
+display: block;
+width: 100%;
+/*  padding: 0.2em 0 0.2em 2em;  */
+padding: 0.2em 0 0.2em 0.2em;
+color: #4a4a4a;
+text-decoration: none;
+background: #FFFFFF;
+margin:3px 0px;
+}
+
+div.nav ul.navlist li a { width: auto; }
+
+ul.navlist li.upbutton a
+{
+background: #6d6d6d;
+font-weight: bold;
+color: white
+}
+
+ul.navlist li.upbutton a:hover
+{
+color: #000000;
+background: white;
+}
+
+
+ul.navlist li.downbutton a:hover
+{
+color: #000000;
+background: #eaeaea;
+}
+
+
+span.buttonhead {
+ font-weight: bold;
+ padding-left: 0px; 
+
+}
+
+HR.buttonrule {
+    background:inherit ;
+    color: #491818
+}
+
+ 
+
+div.text a  {
+    color: #A98885;
+    font-size: 90% ;
+    background:inherit ;
+    font-family: sans-serif;
+}
+
+a  {
+    color: #A98885;
+    background:inherit ;
+    font-family: sans-serif;
+}
+
+
+div.footer a  {
+    color: #491818;
+    background:inherit ;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+div.header a  {
+    color: #FFB4AC;
+    background:inherit ;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+a:hover {
+    background:inherit ;
+    color: #00E000
+    
+}
+
+
+
+div.text h1 {
+    color: #491818 ;
+    padding-top: 24px
+}
+
+
+div.text h2 {
+    color: #491818 ;
+    padding-top: 16px
+}
+
+div.text h3 {
+    color: #491818 ;
+    padding-top: 12px
+}
+
+div.text h4 {
+    color: #491818 ;
+    padding-top: 12px
+}
+
+div.text p {
+    color: black;
+    font-size: 16px;
+    padding-top: 12px
+}
+
+p {
+    color: black;
+    background:inherit ;
+    padding-top: 8px
+}
+
+span.emph
+{
+background:inherit  ;
+ font-weight: bold;
+color: #544442; 
+}
+
+
+
+ul li
+{
+margin-left: 20px;
+font-size: 16px;
+padding: 2px;
+background:inherit ;
+color: black
+}
+
+
+pre.tagged-sample
+{
+color: black
+}
+
+
+
+table.greentable {
+    border-spacing:10px; 
+    width:100%; 
+    border-width:4px; 
+    border-style:solid; 
+    border-color:#A98885
+}
+
+table.greentable tbody {
+    background: #FFB4AC;
+}
+
+
+
+table.greentable tbody td {
+    padding: 10px;
+ 
+border-bottom-width:1px; 
+border-bottom-style:solid;
+border-bottom-color:#A98885 
+
+}
+
+
